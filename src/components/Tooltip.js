@@ -10,7 +10,12 @@ const Tooltip = ({ text, children }) => {
     children: (
       <>
         {children.props.children}
-        {show && <div className="tooltiptext">{text}</div>}
+        <div
+          className="tooltiptext"
+          style={{ display: show ? "block" : "none" }}
+        >
+          {text}
+        </div>
       </>
     )
   });
