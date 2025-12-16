@@ -7,8 +7,8 @@ const Tooltip = ({ text, children }) => {
     children,
     {
       className: "tooltip",
-      onMouseEnter: () => setShow(true),
-      onMouseLeave: () => setShow(false)
+      onMouseOver: () => setShow(true),
+      onMouseOut: () => setShow(false),
     },
     [
       children.props.children,
