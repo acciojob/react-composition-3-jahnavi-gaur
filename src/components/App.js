@@ -6,22 +6,16 @@ import Tooltip from "./Tooltip";
 const App = () => {
   return (
     <div style={{ padding: "40px" }}>
-      {/* <h2>React Tooltip Demo</h2> */}
-
-
       <Tooltip text="This is a tooltip">
-        <span>Hover over me</span>
+        <h2>Hover over me</h2>
       </Tooltip>
 
-
-      <hr /><br />
-
+      <hr />
 
       <Tooltip text="This is another tooltip">
-        <button>Hover over me to see another tooltip</button>
+        <p>Hover over me to see another tooltip</p>
       </Tooltip>
       <hr/>
-
     </div>
   );
 };
