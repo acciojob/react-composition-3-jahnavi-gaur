@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 
 const Tooltip = ({ text, children }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   return (
     <div 
       className="tooltip" 
-      onMouseEnter={() => setIsVisible(true)} 
-      onMouseLeave={() => setIsVisible(false)}
+      onMouseEnter={() => setShowTooltip(true)} 
+      onMouseLeave={() => setShowTooltip(false)}
+      style={{ display: 'inline-block' }}
     >
+      {/* This renders the children (h2, p, button, etc.) */}
       {children}
-      {isVisible && <span className="tooltiptext">{text}</span>}
+
+      {/* Conditional rendering for the tooltip text */}
+      {showTooltip && <div className="tooltiptext">{text}</div>}
     </div>
   );
 };
