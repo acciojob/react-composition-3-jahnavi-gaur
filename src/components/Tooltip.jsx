@@ -7,15 +7,13 @@ const Tooltip = ({ text, children }) => {
     children,
     {
       className: "tooltip",
-      onMouseEnter: () => setShow(true),
-      onMouseLeave: () => setShow(false),
-      onMouseOver: () => setShow(true),   // Cypress support
-      onMouseOut: () => setShow(false),   // Cypress support
+      onMouseOver: () => setShow(true),
+      onMouseOut: () => setShow(false),
     },
-    <>
-      {children.props.children}
-      {show && <div className="tooltiptext">{text}</div>}
-    </>
+    [
+      children.props.children,
+      show && <div className="tooltiptext">{text}</div>
+    ]
   );
 };
 
