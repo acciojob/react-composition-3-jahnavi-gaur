@@ -9,6 +9,8 @@ const Tooltip = ({ text, children }) => {
       className: "tooltip",
       onMouseEnter: () => setShow(true),
       onMouseLeave: () => setShow(false),
+      onMouseOver: () => setShow(true),   // Cypress support
+      onMouseOut: () => setShow(false),   // Cypress support
     },
     <>
       {children.props.children}
