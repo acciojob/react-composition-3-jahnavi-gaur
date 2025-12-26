@@ -5,15 +5,18 @@ import Tooltip from "./Tooltip";
 const App = () => {
   return (
     <div style={{ padding: "40px" }}>
+      <h2>
       <Tooltip text="This is a tooltip">
-        <h2>Hover over me</h2>
+        <div>Hover over me</div>
       </Tooltip>
-
+      </h2>
       <hr />
 
-      <Tooltip text="This is another tooltip">
-        <p>Hover over me to see another tooltip</p>
+      <p>
+        <Tooltip text="This is another tooltip">
+        <div>Hover over me to see another tooltip</div>
       </Tooltip>
+      </p>
     </div>
   );
 };
